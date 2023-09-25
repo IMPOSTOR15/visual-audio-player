@@ -1,0 +1,152 @@
+.player {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    bottom: 10px;
+    z-index: 9999;
+    left: 10px;
+    right: 10px;
+    background-color: #3d3838;
+    padding: 20px 20px 5px 20px;
+    border-radius: 20px;
+    
+}
+
+.player__top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+}
+.player__track-info {
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.player__controll-btns-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.player__btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    opacity: 0.8;
+    padding: 0;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.player__btn:hover {
+    opacity: 1;
+}
+
+.player__rewind-btn {
+    background-image: url(../../icons/playerIcons/rewind.svg);
+}
+
+.player__play-btn {
+    background-image: url(../../icons/playerIcons/play.svg);
+}
+
+.player__pause-btn {
+    background-image: url(../../icons/playerIcons/pause.svg);
+}
+
+.player__fast-forward-btn {
+    background-image: url(../../icons/playerIcons/fast_forward.svg);
+}
+.player__previous-btn {
+    background-image: url(../../icons/playerIcons/previous.svg);
+    width: 30px;
+    height: 30px;
+}
+.player__next-btn {
+    background-image: url(../../icons/playerIcons/next.svg);
+    width: 30px;
+    height: 30px;
+}
+.player__volume-btn {
+    background-image: url(../../icons/playerIcons/volume.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.player__muted-btn {
+    background-image: url(../../icons/playerIcons/muted.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.player__shuffle-btn {
+    background-image: url(../../icons/playerIcons/shuffle_off.svg);
+}
+
+.player__shuffle-btn_active {
+    background-image: url(../../icons/playerIcons/shuffle_on.svg);
+}
+
+.player__repeat-btn {
+    background-image: url(../../icons/playerIcons/repeat_off.svg);
+}
+
+.player__repeat-btn_active {
+    background-image: url(../../icons/playerIcons/repeat_on.svg);
+}
+
+.volume-control {
+    position: relative;
+    display: inline-block;
+}
+
+
+.player__volume-input {
+    position: relative;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 130px;
+    -webkit-appearance: slider-vertical;
+}
+
+.player__volume-input::-webkit-slider-runnable-track {
+    background-color: #3d3838;
+    padding: 5px;
+    border: 1px solid #ed6d2d;
+    border-radius: 20px;
+}
+
+.player__volume-input::-webkit-slider-thumb {
+    cursor: pointer;
+    width:15px;
+    height: 15px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    z-index: -999;
+    box-shadow: 0px  0 10px 5px  #ed6d2d;
+    background-color: #ed6d2d;
+}
+
+
+@media (max-width: 767px) {
+    .player__btn {
+        width: 6vw;
+        height: 6vw;
+    }
+    .player__previous-btn,
+    .player__next-btn,
+    .player__volume-btn,
+    .player__muted-btn {
+        width: 5vw;
+        height: 5vw;
+    }
+
+}

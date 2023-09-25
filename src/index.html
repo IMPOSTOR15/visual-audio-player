@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Аудио-плейер</title>
+    </head>
+    <body>
+        <main class="root">
+            <section class="playlist">
+                <div class="playlist__list">
+                    
+                </div>
+                <div class="user-playlists">
+                    
+                </div>
+                <div class="playlist__tracks">
+                    
+                </div>
+            </section>
+
+            <template id="playlist_track_template">
+                <div class="playlist__track">
+                    <p class="playlist__track-name"></p>
+                    <span>-</span>
+                    <p class="playlist__track-artist"></p>
+                </div>
+            </template>
+            <template id="playlist_header_template">
+                <div class="playlist__container">
+                    <p class="playlist__title"></p>
+                </div>
+            </template> 
+
+            <section class="create-playlist">
+                <label class="create-playlist__lable" for="playlist-name">
+                    <span>Название плейлиста</span>
+                    <input type="text" class="create-playlist__name-input" name="playlist-name" id="playlist-name" placeholder="Название плейлиста">
+                </label>
+                <label class="create-playlist__lable" for="upload-track">
+                    <span>Файлы треков плейлиста</span>
+                    <input type="file" class="create-playlist__file-input" name="upload-track" id="upload-track" accept="audio/*" multiple>
+                </label>
+                
+                
+                <button class="create-playlist__create-btn" id="create-playlist-btn">Создать плейлист</button>
+            </section>
+                       
+            <div class="player">
+                <div class="player__top-row">
+                    <div class="player__controll-btns-row">
+                        <button class="player__btn player__previous-btn" id="previous-btn"></button>
+                        <button class="player__btn player__rewind-btn" id="rewind-btn"></button>
+                        <button class="player__btn player__play-btn" id="play-btn"></button>
+                        <button class="player__btn player__fast-forward-btn" id="fast-forward-btn"></button>
+                        <button class="player__btn player__next-btn" id="next-btn"></button>
+                    </div>
+                    <div class="player__track-info">
+                        <span class="player__track-name" id="player-track-name"></span>
+                        -
+                        <span class="player__track-artist" id="player-track-artist"></span>
+                    </div>
+                    <div class="player__controll-btns-row">
+                        <button class="player__btn player__repeat-btn" id="repeat-btn"></button>
+                        <button class="player__btn player__shuffle-btn" id="shuffle-btn"></button>
+                        <div class="volume-control">
+                            <button class="player__btn player__volume-btn" id="volume-btn"></button>
+                            <input class="player__volume-input" id="volume-slider" type="range" min="0" max="1" step="0.01" value="1" orient="vertical" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+                <div id="waveform">
+                    <div id="time">0:00</div>
+                    <div id="duration">0:00</div>
+                    <div id="hover"></div>
+                </div>
+            </div>
+            
+        </main>
+    </body>
+</html>
